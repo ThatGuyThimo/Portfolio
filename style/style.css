@@ -1,0 +1,91 @@
+body{
+    background-color: #112B3C;
+}
+h1 {
+    font-family: Arial;
+    color: white;
+}
+.name {
+    font-family: Arial;
+    color: blue;
+    margin-left: 0.5rem;
+}
+.headder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 250px;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgba(255, 255, 255, 0);
+    overflow: hidden;
+    position: sticky;
+    /* margin-top: 2rem; */
+    margin-left: 2rem;
+    padding-top: 2rem;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    border-radius: 2px;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #F66B0E;
+    color: white;
+    border-radius: 2px;
+}
+.container {
+    display: block;
+    justify-content: center;
+}
+.content {
+    /* margin: 2rem;
+    background-color: #cfcfcf;
+    padding: 1rem;
+    border-radius: 5px; */
+}
+.parallax {
+    /* The image used */
+    background-image: url("../images/codingdark.png");
+  
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.introduction {
+    margin: 2rem;
+    background-color: #205375;
+    padding: 1rem;
+    border-radius: 5px;
+    justify-content: center;
+}
+.skills {
+    margin: 2rem;
+    background-color: #205375;
+    padding: 1rem;
+    border-radius: 5px;
+    justify-content: center;
+}
