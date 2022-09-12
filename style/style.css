@@ -1,91 +1,218 @@
-body{
-    background-color: #112B3C;
+body {
+  background-color: #303036;
 }
+
 h1 {
-    font-family: Arial;
-    color: white;
+  font-family: Arial;
+  color: white;
 }
+
 .name {
-    font-family: Arial;
-    color: blue;
-    margin-left: 0.5rem;
+  font-family: Arial;
+  color: #FC5130;
+  margin-left: 0.5rem;
 }
+
 .headder {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
-    margin-top: 250px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 250px;
 }
-/* Add a black background color to the top navigation */
+
 .topnav {
-    background-color: rgba(255, 255, 255, 0);
-    overflow: hidden;
-    position: sticky;
-    /* margin-top: 2rem; */
-    margin-left: 2rem;
-    padding-top: 2rem;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    border-radius: 2px;
-    color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #F66B0E;
-    color: white;
-    border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+  position: -webkit-sticky;
+  position: sticky;
+  margin-left: 2rem;
+  padding-top: 2rem;
 }
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  border-radius: 2px;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #FC5130;
+  color: white;
+  border-radius: 2px;
+}
+
 .container {
-    display: block;
-    justify-content: center;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .content {
-    /* margin: 2rem;
+  /* margin: 2rem;
     background-color: #cfcfcf;
     padding: 1rem;
     border-radius: 5px; */
 }
+
 .parallax {
-    /* The image used */
-    background-image: url("../images/codingdark.png");
-  
-    /* Set a specific height */
-    min-height: 500px;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* The image used */
+  background-image: url("../images/codingdark.png");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.introduction {
-    margin: 2rem;
-    background-color: #205375;
-    padding: 1rem;
-    border-radius: 5px;
-    justify-content: center;
+
+.introduction, .skills {
+  margin: 2rem;
+  background-color: #272727;
+  padding: 1rem;
+  border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-width: 1rem;
+  color: white;
+  border: 0.2rem solid #FC5130;
 }
-.skills {
-    margin: 2rem;
-    background-color: #205375;
-    padding: 1rem;
-    border-radius: 5px;
-    justify-content: center;
+
+.skillbar-wrapper {
+  margin: 1.5em auto;
 }
+
+.skillbar {
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+  background: #eee;
+  height: 35px;
+  border-radius: 3px;
+}
+
+.skillbar-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110px;
+  font-weight: bold;
+  font-size: 13px;
+  color: #fff;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  margin: 0;
+}
+
+.skillbar-title span {
+  display: block;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  height: 35px;
+  line-height: 35px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.skillbar-bar {
+  height: 35px;
+  width: 0%;
+  border-radius: 3px;
+  -webkit-transition: 500ms linear;
+  transition: 500ms linear;
+  -webkit-transition-property: width, background-color;
+  transition-property: width, background-color;
+}
+
+.skill-bar-percent {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 11px;
+  height: 35px;
+  line-height: 35px;
+  color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: color 500ms ease-out;
+  transition: color 500ms ease-out;
+}
+
+.complete .skill-bar-percent {
+  color: #fff;
+}
+
+.complete.server .skill-bar-percent {
+  color: #333;
+}
+
+.html5 .skillbar-title {
+  background: #d35400;
+}
+
+.html5 .skillbar-bar {
+  background: #e67e22;
+}
+
+.css .skillbar-title {
+  background: #2980b9;
+}
+
+.css .skillbar-bar {
+  background: #3498db;
+}
+
+.javascript .skillbar-title {
+  background: #fac552;
+}
+
+.javascript .skillbar-bar {
+  background: #f1ac18;
+}
+
+.nodejs .skillbar-title {
+  background: #68A063;
+}
+
+.nodejs .skillbar-bar {
+  background: #3C873A;
+}
+
+.php .skillbar-title {
+  background: #46465e;
+}
+
+.php .skillbar-bar {
+  background: #5a68a5;
+}
+
+.git .skillbar-title {
+  background: #641e0f;
+}
+
+.git .skillbar-bar {
+  background: #f34f29;
+}
+
+.server .skillbar-title {
+  background: #5e2750;
+}
+
+.server .skillbar-bar {
+  background: #380a36;
+}
+/*# sourceMappingURL=style.css.map */
