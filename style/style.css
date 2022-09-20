@@ -1,5 +1,15 @@
 body {
   background-color: #303036;
+  margin: 0;
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: 0 !important;
 }
 
 h1 {
@@ -24,21 +34,7 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 400px;
-}
-
-.title {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 400px;
+  margin-top: 40vh;
 }
 
 .topnav {
@@ -51,7 +47,7 @@ h1 {
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -78,16 +74,16 @@ h1 {
 }
 
 .parallax {
-  /* The image used */
   background-image: url("../images/codingdark.png");
-  min-height: 1000px;
+  min-height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.introduction, .skills {
+.introduction,
+.skills {
   margin: 2rem;
   background-color: #272727;
   padding: 1rem;
@@ -100,6 +96,12 @@ h1 {
   border: 0.2rem solid #FC5130;
 }
 
+.introduction h2,
+.skills h2 {
+  font-weight: bold;
+  text-shadow: 2px 2px 8px black;
+}
+
 .skillbar-wrapper {
   margin: 1.5em auto;
 }
@@ -108,7 +110,7 @@ h1 {
   position: relative;
   margin-bottom: 15px;
   width: 100%;
-  background: #eee;
+  background: white;
   height: 35px;
   border-radius: 3px;
 }
@@ -120,7 +122,7 @@ h1 {
   width: 110px;
   font-weight: bold;
   font-size: 13px;
-  color: #fff;
+  color: white;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   margin: 0;
@@ -150,10 +152,10 @@ h1 {
   position: absolute;
   right: 10px;
   top: 0;
-  font-size: 11px;
+  font-size: 20px;
   height: 35px;
   line-height: 35px;
-  color: rgba(0, 0, 0, 0.4);
+  color: black;
   -webkit-transition: color 500ms ease-out;
   transition: color 500ms ease-out;
 }
@@ -228,7 +230,7 @@ h1 {
 p.copyright {
   position: absolute;
   width: 100%;
-  color: #fff;
+  color: white;
   font-size: 0.7em;
   text-align: center;
   bottom: 0;
@@ -259,7 +261,7 @@ p.copyright {
 
 .arrow-wrapper {
   position: absolute;
-  top: 900px;
+  top: 90vh;
   left: 50%;
 }
 
@@ -291,5 +293,15 @@ p.copyright {
 .sticky {
   position: fixed;
   top: 0;
+}
+
+.contact {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */

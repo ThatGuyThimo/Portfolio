@@ -1,6 +1,13 @@
+let navbar = document.getElementById("navbar");
+let skills = document.getElementById("skills");
+let sticky = navbar.offsetTop;
+let skillOffset = skills.offsetTop;
+
+
+// skills animation 
 (function() {
   
-    var SkillsBar = function( bars ) {
+    let SkillsBar = function( bars ) {
       this.bars = document.querySelectorAll( bars );
       if( this.bars.length > 0 ) {
         this.init();
@@ -9,7 +16,7 @@
     
     SkillsBar.prototype = {
       init: function() {
-        var self = this;
+        let self = this;
         self.index = -1;
         self.timer = setTimeout(function() {
           self.action();
@@ -18,18 +25,18 @@
         
       },
       select: function( n ) {
-        var self = this,
+        let self = this,
           bar = self.bars[n];
           
           if( bar ) {
-            var width = bar.parentNode.dataset.percent;
+            let width = bar.parentNode.dataset.percent;
           
             bar.style.width = width;
             bar.parentNode.classList.add( "complete" ); 
           }
       },
       action: function() {
-        var self = this;
+        let self = this;
         self.index++;
         if( self.index == self.bars.length ) {
           clearTimeout( self.timer );
@@ -46,13 +53,8 @@
     window.SkillsBar = SkillsBar;
     
   })();
-  
-  (function() {
-    document.addEventListener( "DOMContentLoaded", function() {
-      var skills = new SkillsBar( ".skillbar-bar" );
-    });
-  })();
 
+  // smooth scrolling on click to element
   document.getElementById("home").onclick = function() {
     window.scrollTo({top: 0, behavior: 'smooth'})
 }
@@ -65,20 +67,35 @@
     element.scrollIntoView({ behavior: 'smooth', block: 'start'});
 }
 
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+// on scroll do x
+window.onscroll = function() {
+  stickyNav()
+  skillAnim()
+};
 
-// Get the navbar
-let navbar = document.getElementById("navbar");
-
-// Get the offset position of the navbar
-let sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
+// add the class sticky to the navbar if the scroll is past the offset and remove it if not
+function stickyNav() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");
   }
+}
+
+// start skillbar animation when in view
+function skillAnim() {
+  if (isInViewport(skills)) {
+    new SkillsBar( ".skillbar-bar" ); // start skills animation
+  }
+}
+
+// check if elemnt is inside the viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
 }
