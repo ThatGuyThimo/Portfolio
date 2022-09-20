@@ -220,6 +220,22 @@ h1 {
   background: #380a36;
 }
 
+.Csharp .skillbar-title {
+  background: #1fd762;
+}
+
+.Csharp .skillbar-bar {
+  background: #0b5a12;
+}
+
+.sql .skillbar-title {
+  background: #00758F;
+}
+
+.sql .skillbar-bar {
+  background: #F29111;
+}
+
 .footer {
   position: relative;
   height: 0.5rem;

@@ -225,6 +225,26 @@ h1 {
   }
 }
 
+.Csharp {
+  .skillbar-title {
+    background: #1fd762;
+  }
+
+  .skillbar-bar {
+    background: #0b5a12;
+  }
+}
+
+.sql {
+  .skillbar-title {
+    background: #00758F;
+  }
+
+  .skillbar-bar {
+    background: #F29111;
+  }
+}
+
 .footer {
   position: relative;
   height: 0.5rem;
