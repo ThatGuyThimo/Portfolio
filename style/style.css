@@ -24,11 +24,24 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 250px;
+  margin-top: 400px;
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 400px;
 }
 
 .topnav {
-  background-color: rgba(255, 255, 255, 0);
   overflow: hidden;
   position: -webkit-sticky;
   position: sticky;
@@ -64,17 +77,10 @@ h1 {
           justify-content: center;
 }
 
-.content {
-  /* margin: 2rem;
-    background-color: #cfcfcf;
-    padding: 1rem;
-    border-radius: 5px; */
-}
-
 .parallax {
   /* The image used */
   background-image: url("../images/codingdark.png");
-  min-height: 500px;
+  min-height: 1000px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -153,10 +159,6 @@ h1 {
 }
 
 .complete .skill-bar-percent {
-  color: #fff;
-}
-
-.complete.server .skill-bar-percent {
   color: #333;
 }
 
@@ -214,5 +216,80 @@ h1 {
 
 .server .skillbar-bar {
   background: #380a36;
+}
+
+.footer {
+  position: relative;
+  height: 0.5rem;
+  width: 100%;
+  background-color: #333333;
+}
+
+p.copyright {
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  font-size: 0.7em;
+  text-align: center;
+  bottom: 0;
+  font-size: medium;
+}
+
+@-webkit-keyframes bounce {
+  50% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  50% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+.arrow-container {
+  width: 25px;
+  -webkit-animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  cursor: pointer;
+  height: 20px;
+}
+
+.arrow-wrapper {
+  position: absolute;
+  top: 900px;
+  left: 50%;
+}
+
+.arrow-down {
+  height: 6px;
+  background: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  border-radius: 5px;
+}
+
+.arrow-down:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 100%;
+  border-radius: 5px;
+  background: white;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
 }
 /*# sourceMappingURL=style.css.map */
