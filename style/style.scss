@@ -1,8 +1,11 @@
 body {
+  font-family: Arial;
   background-color: #303036;
   margin: 0;
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none;  /* for Firefox */
+  /* for Internet Explorer, Edge */
+  -ms-overflow-style: none;
+  /* for Firefox */
+  scrollbar-width: none;
   overflow-y: scroll;
 }
 
@@ -10,34 +13,63 @@ body::-webkit-scrollbar {
   width: 0 !important
 }
 
+@media only screen and (max-width: 374px) {
+  .headder { 
+    display: block; 
+    // left: 50vw;
+    text-align: center;
+  }
+  .topnav {
+    display: none;
+  }
+}
+@media only screen and (min-width: 375px) {
+  .topnav {
+    display: block;
+  }
+  .mobile-topnav {
+   display: none; 
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .headder { 
+    display: block; 
+    // left: 50vw;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 451px) {
+  .headder { 
+    left: 0;
+    display: inline-flex;
+  }
+}
+
 h1 {
-  font-family: Arial;
   color: white;
 }
 
 
 .name {
-  font-family: Arial;
   color: #FC5130;
   margin-left: 0.5rem;
 }
 
 .headder {
   position: absolute;
-  left: 0;
+  width: 100vw;
   top: 0;
-  width: 100%;
-  display: inline-flex;
   justify-content: center;
   margin-top: 40vh;
 }
-
-.topnav {
-  overflow: hidden;
-  position: sticky;
-
-  margin-left: 2rem;
-  padding-top: 2rem;
+.mobile-topnav {
+  transition-property: padding-top, background-color;
+  z-index: 1;
+  transition-duration: 200ms;
+  padding-left: 2rem;
+  padding-top: 1rem;
 
   a {
     float: left;
@@ -48,6 +80,37 @@ h1 {
     font-size: 17px;
 
     &:hover {
+      background-color: #ddd;
+      border-radius: 2px;
+      color: black;
+    }
+
+    &.active {
+      background-color: #FC5130;
+      color: white;
+      border-radius: 2px;
+    }
+  }
+}
+
+.topnav {
+  transition-property: padding-top, background-color;
+  z-index: 1;
+  transition-duration: 200ms;
+  overflow: hidden;
+  padding-left: 2rem;
+  padding-top: 1rem;
+
+  a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+    &:hover {
+      transition: all 200ms;
       background-color: #ddd;
       border-radius: 2px;
       color: black;
@@ -177,11 +240,11 @@ h1 {
 
 .javascript {
   .skillbar-title {
-    background: #fac552;
+    background: #cfba19;
   }
 
   .skillbar-bar {
-    background: #f1ac18;
+    background: #f7df1e;
   }
 }
 
@@ -245,6 +308,16 @@ h1 {
   }
 }
 
+.python {
+  .skillbar-title {
+    background: #306998;
+  }
+
+  .skillbar-bar {
+    background: #FFE873;
+  }
+}
+
 .footer {
   position: relative;
   height: 0.5rem;
@@ -303,12 +376,63 @@ p.copyright {
 }
 
 .sticky {
+  width: 100vw;
   position: fixed;
   top: 0;
+  transition: all 200ms;
+  background-color: rgba(35, 35, 35, 0.612);
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 .contact {
   color: white;
   display: flex;
   justify-content: center;
+}
+
+.dropdown {
+	float: left;
+	.dropbtn {
+		font-size: 16px;
+		border: none;
+		outline: none;
+		color: white;
+		padding: 14px 16px;
+		background-color: inherit;
+		font-family: inherit;
+		margin: 0;
+	}
+	&:hover {
+		.dropbtn {
+      transition: all 200ms;
+      border-radius: 2px;
+      color: black;
+			background-color: rgb(255, 255, 255);
+		}
+		.dropdown-content {
+			display: block;
+		}
+	}
+}
+
+.dropdown-content {
+  transition: all ease-in 200ms;
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	a {
+		float: none;
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+		&:hover {
+			background-color: #ddd;
+		}
+	}
 }

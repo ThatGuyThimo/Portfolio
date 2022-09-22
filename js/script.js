@@ -1,10 +1,11 @@
 let navbar = document.getElementById("navbar");
+let mobileNavbar = document.getElementById("mobile-navbar");
 let skills = document.getElementById("skills");
 let sticky = navbar.offsetTop;
 let skillOffset = skills.offsetTop;
 
 
-// skills animation 
+// skillbar animation 
 (function() {
   
     let SkillsBar = function( bars ) {
@@ -66,6 +67,22 @@ let skillOffset = skills.offsetTop;
     let element = document.getElementById("introduction")
     element.scrollIntoView({ behavior: 'smooth', block: 'start'});
 }
+  document.getElementById("nav-skills").onclick = function() {
+    let element = document.getElementById("skills")
+    element.scrollIntoView({ behavior: 'smooth', block: 'center'});
+}
+  // smooth scrolling on click to element
+  document.getElementById("mobile-home").onclick = function() {
+    window.scrollTo({top: 0, behavior: 'smooth'})
+}
+  document.getElementById("mobile-aboutMe").onclick = function() {
+    let element = document.getElementById("introduction")
+    element.scrollIntoView({ behavior: 'smooth', block: 'center'});
+}
+  document.getElementById("mobile-nav-skills").onclick = function() {
+    let element = document.getElementById("skills")
+    element.scrollIntoView({ behavior: 'smooth', block: 'center'});
+}
 
 // on scroll do x
 window.onscroll = function() {
@@ -75,10 +92,12 @@ window.onscroll = function() {
 
 // add the class sticky to the navbar if the scroll is past the offset and remove it if not
 function stickyNav() {
-  if (window.pageYOffset >= sticky) {
+  if (window.pageYOffset > sticky) {
     navbar.classList.add("sticky")
+    mobileNavbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");
+    mobileNavbar.classList.remove("sticky");
   }
 }
 
