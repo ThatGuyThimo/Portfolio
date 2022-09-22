@@ -13,7 +13,7 @@ body::-webkit-scrollbar {
   width: 0 !important
 }
 
-@media only screen and (max-width: 373.99px) {
+@media only screen and (max-width: 374.99px) {
   .headder {
     display: block;
     // left: 50vw;
@@ -21,14 +21,22 @@ body::-webkit-scrollbar {
   }
 
   .topnav {
-    display: none;
+    visibility: hidden;
   }
 
-  .nav a {
-    transition: padding 500ms;
-    transition: font-size 500ms;
-    padding: 10px 12px;
-    font-size: 15px;
+  .nav {
+    .mobile-topnav .dropbtn {
+      transition-property: padding, font-size;
+      transition-duration: 700ms;
+      padding: 10px 12px;
+      font-size: 15px;
+    }
+    a {
+      transition-property: padding, font-size;
+      transition-duration: 700ms;
+      padding: 10px 12px;
+      font-size: 15px;
+    }
   }
 }
 
@@ -37,11 +45,19 @@ body::-webkit-scrollbar {
     display: block;
   }
 
-  .nav a {
-    transition: padding 500ms;
-    transition: font-size 500ms;
-    padding: 14px 16px;
-    font-size: 17px;
+  .nav {
+    .mobile-topnav .dropbtn {
+      transition-property: padding, font-size;
+      transition-duration: 700ms;
+      padding: 14px 16px;
+      font-size: 17px;
+    }
+    a {
+      transition-property: padding, font-size;
+      transition-duration: 700ms;
+      padding: 14px 16px;
+      font-size: 17px;
+    } 
   }
 
   .mobile-topnav {
@@ -408,11 +424,11 @@ p.copyright {
   float: left;
 
   .dropbtn {
-    font-size: 16px;
+    font-size: 15px;
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 10px 12px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;

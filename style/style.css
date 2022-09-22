@@ -13,19 +13,27 @@ body::-webkit-scrollbar {
   width: 0 !important;
 }
 
-@media only screen and (max-width: 373.99px) {
+@media only screen and (max-width: 374.99px) {
   .headder {
     display: block;
     text-align: center;
   }
   .topnav {
-    display: none;
+    visibility: hidden;
+  }
+  .nav .mobile-topnav .dropbtn {
+    -webkit-transition-property: padding, font-size;
+    transition-property: padding, font-size;
+    -webkit-transition-duration: 700ms;
+            transition-duration: 700ms;
+    padding: 10px 12px;
+    font-size: 15px;
   }
   .nav a {
-    -webkit-transition: padding 500ms;
-    transition: padding 500ms;
-    -webkit-transition: font-size 500ms;
-    transition: font-size 500ms;
+    -webkit-transition-property: padding, font-size;
+    transition-property: padding, font-size;
+    -webkit-transition-duration: 700ms;
+            transition-duration: 700ms;
     padding: 10px 12px;
     font-size: 15px;
   }
@@ -35,11 +43,19 @@ body::-webkit-scrollbar {
   .topnav {
     display: block;
   }
+  .nav .mobile-topnav .dropbtn {
+    -webkit-transition-property: padding, font-size;
+    transition-property: padding, font-size;
+    -webkit-transition-duration: 700ms;
+            transition-duration: 700ms;
+    padding: 14px 16px;
+    font-size: 17px;
+  }
   .nav a {
-    -webkit-transition: padding 500ms;
-    transition: padding 500ms;
-    -webkit-transition: font-size 500ms;
-    transition: font-size 500ms;
+    -webkit-transition-property: padding, font-size;
+    transition-property: padding, font-size;
+    -webkit-transition-duration: 700ms;
+            transition-duration: 700ms;
     padding: 14px 16px;
     font-size: 17px;
   }
@@ -415,11 +431,11 @@ p.copyright {
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;
+  font-size: 15px;
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
+  padding: 10px 12px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
