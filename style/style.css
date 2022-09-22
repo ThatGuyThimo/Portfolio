@@ -13,7 +13,7 @@ body::-webkit-scrollbar {
   width: 0 !important;
 }
 
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 373.99px) {
   .headder {
     display: block;
     text-align: center;
@@ -21,14 +21,30 @@ body::-webkit-scrollbar {
   .topnav {
     display: none;
   }
+  .nav a {
+    -webkit-transition: padding 500ms;
+    transition: padding 500ms;
+    -webkit-transition: font-size 500ms;
+    transition: font-size 500ms;
+    padding: 10px 12px;
+    font-size: 15px;
+  }
 }
 
 @media only screen and (min-width: 375px) {
   .topnav {
     display: block;
   }
+  .nav a {
+    -webkit-transition: padding 500ms;
+    transition: padding 500ms;
+    -webkit-transition: font-size 500ms;
+    transition: font-size 500ms;
+    padding: 14px 16px;
+    font-size: 17px;
+  }
   .mobile-topnav {
-    display: none;
+    visibility: hidden;
   }
 }
 
@@ -68,11 +84,7 @@ h1 {
 }
 
 .mobile-topnav {
-  -webkit-transition-property: padding-top, background-color;
-  transition-property: padding-top, background-color;
   z-index: 1;
-  -webkit-transition-duration: 200ms;
-          transition-duration: 200ms;
   padding-left: 2rem;
   padding-top: 1rem;
 }
@@ -81,9 +93,7 @@ h1 {
   float: left;
   color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
 }
 
 .mobile-topnav a:hover {
@@ -99,6 +109,7 @@ h1 {
 }
 
 .topnav {
+  position: absolute;
   -webkit-transition-property: padding-top, background-color;
   transition-property: padding-top, background-color;
   z-index: 1;
@@ -113,9 +124,7 @@ h1 {
   float: left;
   color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
 }
 
 .topnav a:hover {
