@@ -1,18 +1,3 @@
-body {
-  font-family: Arial;
-  background-color: #303036;
-  margin: 0;
-  /* for Internet Explorer, Edge */
-  -ms-overflow-style: none;
-  /* for Firefox */
-  scrollbar-width: none;
-  overflow-y: scroll;
-}
-
-body::-webkit-scrollbar {
-  width: 0 !important
-}
-
 @media only screen and (max-width: 376px) {
   .headder {
     display: block;
@@ -178,6 +163,22 @@ body::-webkit-scrollbar {
     height: 55px;
   }
 }
+
+body {
+  font-family: Arial;
+  background-color: #303036;
+  margin: 0;
+  /* for Internet Explorer, Edge */
+  -ms-overflow-style: none;
+  /* for Firefox */
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: 0 !important
+}
+
 
 h1 {
   color: white;
