@@ -120,6 +120,13 @@
   .skillbar {
     height: 35px;
   }
+  .arrow-container {
+    width: 25px;
+    height: 20px;
+  }
+  .arrow-down {
+    height: 6px;
+  }
 }
 
 @media screen and (min-width: 1600px) and (max-width: 2800px) {
@@ -178,6 +185,13 @@
   .socialmedia {
     margin-left: 1.2rem;
   }
+  .arrow-container {
+    width: 35px;
+    height: 30px;
+  }
+  .arrow-down {
+    height: 10px;
+  }
 }
 
 body {
@@ -188,7 +202,9 @@ body {
   -ms-overflow-style: none;
   /* for Firefox */
   scrollbar-width: none;
-  overflow-y: scroll;
+  // overflow-y: scroll;
+  overflow-X: hidden;
+  // -moz-overflow-style: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -204,14 +220,21 @@ h1 {
 .name {
   color: #FC5130;
   margin-left: 0.5rem;
+  animation: headder-load-right 1200ms;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.42,0.20,0.50,1);
 }
 
 .headder {
   position: absolute;
   width: 100vw;
-  top: 0;
+  top: 40vh;
   justify-content: center;
-  margin-top: 40vh;
+  .title {
+    animation: headder-load-left 1200ms;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.42,0.20,0.50,1);
+  }
 }
 
 .content {
@@ -220,6 +243,7 @@ h1 {
 }
 
 .mobile-topnav {
+  animation: nav-load ease-in-out 800ms;
   transition-property: padding-top, background-color;
   transition-duration: 200ms;
   z-index: 1;
@@ -247,6 +271,7 @@ h1 {
 }
 
 .topnav {
+  animation: nav-load ease-in-out 800ms;
   position: absolute;
   transition-property: padding-top, background-color;
   z-index: 1;
@@ -480,10 +505,8 @@ h1 {
 }
 
 .arrow-container {
-  width: 25px;
-  animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  animation: bounce 1800ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
   cursor: pointer;
-  height: 20px;
 }
 
 .arrow-wrapper {
@@ -493,7 +516,7 @@ h1 {
 }
 
 .arrow-down {
-  height: 6px;
+  animation: arrow-fade ease-in 2s ;
   background: white;
   transform: rotate(45deg);
   transform-origin: 0% 0%;
@@ -606,7 +629,7 @@ h1 {
   }
   h2 {
     text-align: center;
-    border-bottom:2px solid black;
+    border-bottom:2px solid rgb(29, 29, 29);
   }
   .socialmedia {
     margin-top: 10px;
@@ -634,5 +657,53 @@ h1 {
     color: white;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
+  }
+}
+
+@keyframes nav-load {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
+@keyframes headder-load-left {
+  0% {
+    transform: translateX(-10vw);
+    opacity: 0%;
+  }
+  20% {
+    opacity: 0%;
+  }
+  100% {
+    transform: translateX(0vw);
+    opacity: 100%;
+  }
+}
+@keyframes headder-load-right {
+  0% {
+    transform: translateX(10vw);
+    opacity: 0%;
+  }
+  20% {
+    opacity: 0%;
+  }
+  100% {
+    transform: translateX(0vw);
+    opacity: 100%;
+  }
+}
+@keyframes arrow-fade {
+  0% {
+    opacity: 0%;
+  }
+  33% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
   }
 }
