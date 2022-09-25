@@ -71,6 +71,10 @@ let skillOffset = skills.offsetTop;
     let element = document.getElementById("skills")
     element.scrollIntoView({ behavior: 'smooth', block: 'center'});
 }
+document.getElementById("contact").onclick = function() {
+  let element = document.getElementById("footer")
+  element.scrollIntoView({ behavior: 'smooth', block: 'start'});
+}
   // smooth scrolling on click to element
   document.getElementById("mobile-home").onclick = function() {
     window.scrollTo({top: 0, behavior: 'smooth'})
@@ -82,6 +86,26 @@ let skillOffset = skills.offsetTop;
   document.getElementById("mobile-nav-skills").onclick = function() {
     let element = document.getElementById("skills")
     element.scrollIntoView({ behavior: 'smooth', block: 'center'});
+}
+document.getElementById("mobile-contact").onclick = function() {
+  let element = document.getElementById("footer")
+  element.scrollIntoView({ behavior: 'smooth', block: 'start'});
+}
+  // smooth scrolling on click to element nav element
+  document.getElementById("bottom-home").onclick = function() {
+    window.scrollTo({top: 0, behavior: 'smooth'})
+}
+  document.getElementById("bottom-aboutMe").onclick = function() {
+    let element = document.getElementById("introduction")
+    element.scrollIntoView({ behavior: 'smooth', block: 'center'});
+}
+  document.getElementById("bottom-nav-skills").onclick = function() {
+    let element = document.getElementById("skills")
+    element.scrollIntoView({ behavior: 'smooth', block: 'center'});
+}
+  document.getElementById("bottom-contact").onclick = function() {
+    let element = document.getElementById("footer")
+    element.scrollIntoView({ behavior: 'smooth', block: 'start'});
 }
 
 // on scroll do x

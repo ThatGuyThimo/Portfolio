@@ -1,6 +1,6 @@
 body {
   font-family: Arial;
-  background-color: #303036;
+  background-color: #454547;
   margin: 0;
   /* for Internet Explorer, Edge */
   -ms-overflow-style: none;
@@ -342,16 +342,6 @@ h1 {
   background-color: #333333;
 }
 
-p.copyright {
-  position: absolute;
-  width: 100%;
-  color: white;
-  font-size: 0.7em;
-  text-align: center;
-  bottom: 0;
-  font-size: medium;
-}
-
 @-webkit-keyframes bounce {
   50% {
     -webkit-transform: translateY(-15px);
@@ -409,8 +399,10 @@ p.copyright {
   width: 100vw;
   position: fixed;
   top: 0;
-  -webkit-transition: all 200ms;
-  transition: all 200ms;
+  -webkit-transition-property: background-color, padding-top, padding-bottom;
+  transition-property: background-color, padding-top, padding-bottom;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
   background-color: rgba(35, 35, 35, 0.612);
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -476,5 +468,64 @@ p.copyright {
 
 .dropdown-content a:hover {
   background-color: #ddd;
+}
+
+.footer {
+  display: block;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-container {
+  padding-bottom: 0.5rem;
+  background-color: #2e2e2e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-card {
+  margin: 0px 10px 0px 10px;
+  color: white;
+  display: block;
+}
+
+.footer-card li {
+  padding-bottom: 5px;
+}
+
+.footer-card .socialmedia {
+  margin-left: 1.2rem;
+  margin-top: 10px;
+}
+
+.footer-card .socialmedia img {
+  max-width: 30px;
+}
+
+.nav-bottom li :hover {
+  color: grey;
+  cursor: pointer;
+}
+
+.copyright {
+  background-color: #1d1d1d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.copyright p {
+  color: white;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */
