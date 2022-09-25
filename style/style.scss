@@ -168,6 +168,9 @@
   .footer {
     font-size: 125%;
   }
+  .socialmedia {
+    margin-left: 1.2rem;
+  }
 }
 
 body {
@@ -592,8 +595,11 @@ display: block;
   li {
     padding-bottom: 5px;
   }
+  h2 {
+    text-align: center;
+    border-bottom:3px dashed black;
+  }
   .socialmedia {
-    margin-left: 1.2rem;
     margin-top: 10px;
     img{
       max-width: 30px;

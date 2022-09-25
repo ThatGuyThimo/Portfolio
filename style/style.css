@@ -159,6 +159,9 @@
   .footer {
     font-size: 125%;
   }
+  .socialmedia {
+    margin-left: 1.2rem;
+  }
 }
 
 body {
@@ -600,8 +603,12 @@ h1 {
   padding-bottom: 5px;
 }
 
+.footer-card h2 {
+  text-align: center;
+  border-bottom: 3px dashed black;
+}
+
 .footer-card .socialmedia {
-  margin-left: 1.2rem;
   margin-top: 10px;
 }
 
