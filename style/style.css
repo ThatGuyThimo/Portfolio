@@ -22,6 +22,9 @@
     padding: 10px 12px;
     font-size: 15px;
   }
+  .footer {
+    font-size: 80%;
+  }
 }
 
 @media only screen and (min-width: 376px) {
@@ -130,8 +133,8 @@
     transition-property: padding, font-size;
     -webkit-transition-duration: 700ms;
             transition-duration: 700ms;
-    padding: 20px 24px;
-    font-size: 125%;
+    padding: 24px 28px;
+    font-size: 150%;
   }
   .content {
     margin: 6rem auto;
@@ -152,6 +155,9 @@
   }
   .skillbar {
     height: 55px;
+  }
+  .footer {
+    font-size: 125%;
   }
 }
 
