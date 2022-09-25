@@ -1,3 +1,169 @@
+@media only screen and (max-width: 376px) {
+  .headder {
+    display: block;
+    // left: 50vw;
+    text-align: center;
+  }
+
+  .topnav {
+    visibility: hidden;
+  }
+
+  .nav {
+    .mobile-topnav .dropbtn {
+      transition-property: padding, font-size;
+      transition-duration: 700ms;
+      padding: 10px 12px;
+      font-size: 15px;
+    }
+
+    a {
+      transition-property: padding, font-size;
+      transition-duration: 700ms;
+      padding: 10px 12px;
+      font-size: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: 376px) {
+  .topnav {
+    display: block;
+  }
+
+  .nav {
+    .mobile-topnav .dropbtn {
+      transition-property: padding, font-size;
+      transition-duration: 700ms;
+      padding: 14px 16px;
+      font-size: 17px;
+    }
+
+    a {
+      transition-property: padding, font-size;
+      transition-duration: 700ms;
+      padding: 14px 16px;
+      font-size: 17px;
+    }
+  }
+
+  .mobile-topnav {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .headder {
+    display: block;
+    text-align: center;
+
+    h1 {
+      transition-property: font-size;
+      transition-duration: 500ms;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 451px) {
+  .headder {
+    left: 0;
+    display: inline-flex;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .headder {
+    h1 {
+      transition-property: font-size;
+      transition-duration: 500ms;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .headder {
+    h1 {
+      transition-property: font-size;
+      transition-duration: 500ms;
+      font-size: 3.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .content {
+    margin: 2rem;
+  }
+}
+
+@media screen and (max-width: 2800px) {
+  .skill-bar-percent {
+    line-height: 35px;
+  }
+
+  .skillbar-title span {
+    line-height: 35px;
+  }
+
+  .skillbar {
+    height: 35px;
+  }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 2800px) {
+  .content {
+    margin: 2rem auto;
+    max-width: 1500px;
+  }
+}
+
+@media only screen and (min-width: 2800px) {
+  .headder {
+    h1 {
+      transition-property: font-size;
+      transition-duration: 500ms;
+      font-size: 4.5rem;
+    }
+  }
+
+  .nav {
+    a {
+      transition-property: padding, font-size;
+      transition-duration: 700ms;
+      padding: 20px 24px;
+      font-size: 125%;
+    }
+  }
+
+  .content {
+    margin: 6rem auto;
+    max-width: 2500px;
+    font-size: 125%;
+  }
+
+  .skill-bar-percent {
+    font-size: 125%;
+  }
+
+  .skillbar-title span {
+    font-size: 125%;
+  }
+
+  .skill-bar-percent {
+    line-height: 55px;
+  }
+
+  .skillbar-title span {
+    line-height: 55px;
+  }
+
+  .skillbar {
+    height: 55px;
+  }
+}
+
 body {
   font-family: Arial;
   background-color: #454547;
@@ -13,72 +179,6 @@ body::-webkit-scrollbar {
   width: 0 !important
 }
 
-@media only screen and (max-width: 374.99px) {
-  .headder {
-    display: block;
-    // left: 50vw;
-    text-align: center;
-  }
-
-  .topnav {
-    visibility: hidden;
-  }
-
-  .nav {
-    .mobile-topnav .dropbtn {
-      transition-property: padding, font-size;
-      transition-duration: 700ms;
-      padding: 10px 12px;
-      font-size: 15px;
-    }
-    a {
-      transition-property: padding, font-size;
-      transition-duration: 700ms;
-      padding: 10px 12px;
-      font-size: 15px;
-    }
-  }
-}
-
-@media only screen and (min-width: 375px) {
-  .topnav {
-    display: block;
-  }
-
-  .nav {
-    .mobile-topnav .dropbtn {
-      transition-property: padding, font-size;
-      transition-duration: 700ms;
-      padding: 14px 16px;
-      font-size: 17px;
-    }
-    a {
-      transition-property: padding, font-size;
-      transition-duration: 700ms;
-      padding: 14px 16px;
-      font-size: 17px;
-    } 
-  }
-
-  .mobile-topnav {
-    visibility: hidden;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .headder {
-    display: block;
-    // left: 50vw;
-    text-align: center;
-  }
-}
-
-@media only screen and (min-width: 451px) {
-  .headder {
-    left: 0;
-    display: inline-flex;
-  }
-}
 
 h1 {
   color: white;
@@ -98,7 +198,14 @@ h1 {
   margin-top: 40vh;
 }
 
+.content {
+  transition-property: margin, font-size, max-width;
+  transition-duration: 700ms;
+}
+
 .mobile-topnav {
+  transition-property: padding-top, background-color;
+  transition-duration: 200ms;
   z-index: 1;
   padding-left: 2rem;
   padding-top: 1rem;
@@ -170,11 +277,9 @@ h1 {
 
 .introduction,
 .skills {
-  margin: 2rem;
   background-color: #272727;
   padding: 1rem;
   border-radius: 5px;
-  justify-content: center;
   border-width: 1rem;
   color: white;
   border: 0.2rem solid #FC5130;
@@ -195,7 +300,6 @@ h1 {
   margin-bottom: 15px;
   width: 100%;
   background: white;
-  height: 35px;
   border-radius: 3px;
 }
 
@@ -210,20 +314,20 @@ h1 {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   margin: 0;
+  height: inherit;
 
   span {
     display: block;
     background: rgba(0, 0, 0, 0.1);
     padding: 0 20px;
-    height: 35px;
-    line-height: 35px;
+    height: inherit;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
   }
 }
 
 .skillbar-bar {
-  height: 35px;
+  height: inherit;
   width: 0%;
   border-radius: 3px;
   transition: 500ms linear;
@@ -235,8 +339,7 @@ h1 {
   right: 10px;
   top: 0;
   font-size: 20px;
-  height: 35px;
-  line-height: 35px;
+  height: inherit;
   color: black;
   transition: color 500ms ease-out;
 }
@@ -398,7 +501,7 @@ h1 {
   width: 100vw;
   position: fixed;
   top: 0;
-  transition-property: background-color, padding-top, padding-bottom;
+  transition-property: padding-top, padding-bottom, background-color;
   transition-duration: 200ms;
   background-color: rgba(35, 35, 35, 0.612);
   padding-top: 2rem;
