@@ -206,15 +206,13 @@ h1 {
 .name {
   color: #FC5130;
   margin-left: 0.5rem;
-  -webkit-animation: headder-load-right 1200ms;
-          animation: headder-load-right 1200ms;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: cubic-bezier(0.42, 0.2, 0.5, 1);
-          animation-timing-function: cubic-bezier(0.42, 0.2, 0.5, 1);
+  -webkit-animation: headder-load-right 1200ms 1 cubic-bezier(0.42, 0.2, 0.5, 1);
+          animation: headder-load-right 1200ms 1 cubic-bezier(0.42, 0.2, 0.5, 1);
 }
 
 .headder {
+  -webkit-animation: scale 8s ease-in-out 1500ms infinite normal none;
+          animation: scale 8s ease-in-out 1500ms infinite normal none;
   position: absolute;
   width: 100vw;
   top: 40vh;
@@ -224,12 +222,8 @@ h1 {
 }
 
 .headder .title {
-  -webkit-animation: headder-load-left 1200ms;
-          animation: headder-load-left 1200ms;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: cubic-bezier(0.42, 0.2, 0.5, 1);
-          animation-timing-function: cubic-bezier(0.42, 0.2, 0.5, 1);
+  -webkit-animation: headder-load-left 1200ms 1 cubic-bezier(0.42, 0.2, 0.5, 1);
+          animation: headder-load-left 1200ms 1 cubic-bezier(0.42, 0.2, 0.5, 1);
 }
 
 .content {
@@ -775,7 +769,7 @@ h1 {
   0% {
     opacity: 0%;
   }
-  33% {
+  50% {
     opacity: 0%;
   }
   100% {
@@ -787,11 +781,41 @@ h1 {
   0% {
     opacity: 0%;
   }
-  33% {
+  50% {
     opacity: 0%;
   }
   100% {
     opacity: 100%;
+  }
+}
+
+@-webkit-keyframes scale {
+  0% {
+    scale: 100%;
+  }
+  70% {
+    scale: 100%;
+  }
+  85% {
+    scale: 108%;
+  }
+  100% {
+    scale: 100%;
+  }
+}
+
+@keyframes scale {
+  0% {
+    scale: 100%;
+  }
+  70% {
+    scale: 100%;
+  }
+  85% {
+    scale: 108%;
+  }
+  100% {
+    scale: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
