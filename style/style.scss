@@ -220,20 +220,17 @@ h1 {
 .name {
   color: #FC5130;
   margin-left: 0.5rem;
-  animation: headder-load-right 1200ms;
-  animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(0.42,0.20,0.50,1);
+  animation: headder-load-right 1200ms 1 cubic-bezier(0.42,0.20,0.50,1);
 }
 
 .headder {
+  animation: scale 8s ease-in-out 1500ms infinite normal none;
   position: absolute;
   width: 100vw;
   top: 40vh;
   justify-content: center;
   .title {
-    animation: headder-load-left 1200ms;
-    animation-iteration-count: 1;
-    animation-timing-function: cubic-bezier(0.42,0.20,0.50,1);
+    animation: headder-load-left 1200ms 1 cubic-bezier(0.42,0.20,0.50,1);
   }
 }
 
@@ -700,10 +697,24 @@ h1 {
   0% {
     opacity: 0%;
   }
-  33% {
+  50% {
     opacity: 0%;
   }
   100% {
     opacity: 100%;
+  }
+}
+@keyframes scale {
+  0% {
+    scale: 100%;
+  }
+  70% {
+    scale: 100%;
+  }
+  85% {
+    scale: 108%;
+  }
+  100% {
+    scale: 100%;
   }
 }
