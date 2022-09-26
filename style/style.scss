@@ -240,7 +240,7 @@ h1 {
 }
 
 .mobile-topnav {
-  animation: nav-load ease-in-out 800ms;
+  animation: nav-load 1600ms ease-in-out;
   transition-property: padding-top, background-color;
   transition-duration: 200ms;
   z-index: 1;
@@ -268,7 +268,7 @@ h1 {
 }
 
 .topnav {
-  animation: nav-load ease-in-out 800ms;
+  animation: nav-load 1600ms ease-in-out;
   position: absolute;
   transition-property: padding-top, background-color;
   z-index: 1;
@@ -659,6 +659,10 @@ h1 {
 
 @keyframes nav-load {
   0% {
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+  70% {
     transform: translateY(-100%);
     opacity: 0%;
   }

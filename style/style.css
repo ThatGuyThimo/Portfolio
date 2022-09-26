@@ -234,8 +234,8 @@ h1 {
 }
 
 .mobile-topnav {
-  -webkit-animation: nav-load ease-in-out 800ms;
-          animation: nav-load ease-in-out 800ms;
+  -webkit-animation: nav-load 1600ms ease-in-out;
+          animation: nav-load 1600ms ease-in-out;
   -webkit-transition-property: padding-top, background-color;
   transition-property: padding-top, background-color;
   -webkit-transition-duration: 200ms;
@@ -265,8 +265,8 @@ h1 {
 }
 
 .topnav {
-  -webkit-animation: nav-load ease-in-out 800ms;
-          animation: nav-load ease-in-out 800ms;
+  -webkit-animation: nav-load 1600ms ease-in-out;
+          animation: nav-load 1600ms ease-in-out;
   position: absolute;
   -webkit-transition-property: padding-top, background-color;
   transition-property: padding-top, background-color;
@@ -681,6 +681,11 @@ h1 {
             transform: translateY(-100%);
     opacity: 0%;
   }
+  70% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0%;
+  }
   100% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
@@ -690,6 +695,11 @@ h1 {
 
 @keyframes nav-load {
   0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0%;
+  }
+  70% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
     opacity: 0%;
