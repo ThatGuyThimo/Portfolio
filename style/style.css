@@ -192,6 +192,7 @@ body {
   -ms-overflow-style: none;
   /* for Firefox */
   scrollbar-width: none;
+  overflow-y: scroll;
   overflow-X: hidden;
 }
 
@@ -276,6 +277,7 @@ h1 {
   overflow: hidden;
   padding-left: 2rem;
   padding-top: 1rem;
+  width: 100vw;
 }
 
 .topnav a {

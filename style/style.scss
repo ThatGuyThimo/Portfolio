@@ -24,9 +24,11 @@
       font-size: 15px;
     }
   }
+
   .footer {
     font-size: 80%;
   }
+
   .socialmedia img {
     max-width: 20px;
   }
@@ -57,7 +59,7 @@
     visibility: hidden;
   }
 
-  .socialmedia img{
+  .socialmedia img {
     max-width: 30px;
   }
 }
@@ -120,10 +122,12 @@
   .skillbar {
     height: 35px;
   }
+
   .arrow-container {
     width: 25px;
     height: 20px;
   }
+
   .arrow-down {
     height: 6px;
   }
@@ -150,7 +154,7 @@
       transition-property: padding, font-size;
       transition-duration: 700ms;
       padding: 24px 28px;
-      font-size:150%;
+      font-size: 150%;
     }
   }
 
@@ -179,16 +183,20 @@
   .skillbar {
     height: 55px;
   }
+
   .footer {
     font-size: 125%;
   }
+
   .socialmedia {
     margin-left: 1.2rem;
   }
+
   .arrow-container {
     width: 35px;
     height: 30px;
   }
+
   .arrow-down {
     height: 10px;
   }
@@ -202,7 +210,7 @@ body {
   -ms-overflow-style: none;
   /* for Firefox */
   scrollbar-width: none;
-  // overflow-y: scroll;
+  overflow-y: scroll;
   overflow-X: hidden;
   // -moz-overflow-style: hidden;
 }
@@ -220,7 +228,7 @@ h1 {
 .name {
   color: #FC5130;
   margin-left: 0.5rem;
-  animation: headder-load-right 1200ms 1 cubic-bezier(0.42,0.20,0.50,1);
+  animation: headder-load-right 1200ms 1 cubic-bezier(0.42, 0.20, 0.50, 1);
 }
 
 .headder {
@@ -229,8 +237,9 @@ h1 {
   width: 100vw;
   top: 40vh;
   justify-content: center;
+
   .title {
-    animation: headder-load-left 1200ms 1 cubic-bezier(0.42,0.20,0.50,1);
+    animation: headder-load-left 1200ms 1 cubic-bezier(0.42, 0.20, 0.50, 1);
   }
 }
 
@@ -276,6 +285,7 @@ h1 {
   overflow: hidden;
   padding-left: 2rem;
   padding-top: 1rem;
+  width: 100vw;
 
   a {
     float: left;
@@ -513,7 +523,7 @@ h1 {
 }
 
 .arrow-down {
-  animation: arrow-fade ease-in 2s ;
+  animation: arrow-fade ease-in 2s;
   background: white;
   transform: rotate(45deg);
   transform-origin: 0% 0%;
@@ -605,6 +615,7 @@ h1 {
   transition-property: font-size;
   transition-duration: 500ms;
   display: block;
+
   p {
     margin: 0;
   }
@@ -621,15 +632,19 @@ h1 {
   margin: 0px 10px 0px 10px;
   color: white;
   display: block;
+
   li {
     padding-bottom: 5px;
   }
+
   h2 {
     text-align: center;
-    border-bottom:2px solid rgb(29, 29, 29);
+    border-bottom: 2px solid rgb(29, 29, 29);
   }
+
   .socialmedia {
     margin-top: 10px;
+
     img {
       transition-property: max-width;
       transition-duration: 500ms;
@@ -662,62 +677,77 @@ h1 {
     transform: translateY(-100%);
     opacity: 0%;
   }
+
   70% {
     transform: translateY(-100%);
     opacity: 0%;
   }
+
   100% {
     transform: translateY(0%);
     opacity: 100%;
   }
 }
+
 @keyframes headder-load-left {
   0% {
     transform: translateX(-10vw);
     opacity: 0%;
   }
+
   20% {
     opacity: 0%;
   }
+
   100% {
     transform: translateX(0vw);
     opacity: 100%;
   }
 }
+
 @keyframes headder-load-right {
   0% {
     transform: translateX(10vw);
     opacity: 0%;
   }
+
   20% {
     opacity: 0%;
   }
+
   100% {
     transform: translateX(0vw);
     opacity: 100%;
   }
 }
+
 @keyframes arrow-fade {
   0% {
     opacity: 0%;
   }
+
   50% {
     opacity: 0%;
   }
+
   100% {
     opacity: 100%;
   }
 }
+
 @keyframes scale {
   0% {
     scale: 100%;
   }
+
   70% {
     scale: 100%;
   }
+
   85% {
     scale: 108%;
   }
+
   100% {
     scale: 100%;
   }
