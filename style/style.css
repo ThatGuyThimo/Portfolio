@@ -639,7 +639,7 @@ h1 {
 
 .footer-card h2 {
   text-align: center;
-  border-bottom: 2px solid #1d1d1d;
+  border-bottom: 2px solid white;
 }
 
 .footer-card .socialmedia {
@@ -653,10 +653,6 @@ h1 {
   transition-property: max-width;
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
-}
-
-.footer-card .socialmedia img :hover {
-  color: white;
 }
 
 .list-container {

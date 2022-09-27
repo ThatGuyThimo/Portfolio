@@ -636,7 +636,7 @@ h1 {
 
   h2 {
     text-align: center;
-    border-bottom: 2px solid rgb(29, 29, 29);
+      border-bottom: 2px solid white;
   }
 
   .socialmedia {
@@ -647,10 +647,6 @@ h1 {
       max-width: 30px;
       transition-property: max-width;
       transition-duration: 500ms;
-
-      :hover {
-        color: white;
-      }
     } 
   }
 }
