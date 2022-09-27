@@ -25,6 +25,10 @@
     }
   }
 
+  .grid-container {
+    grid-template-columns: auto;
+  }
+
   .footer {
     // font-size: 80%;
     display: block;
@@ -54,6 +58,9 @@
 
   .mobile-topnav {
     visibility: hidden;
+  }
+  .grid-container {
+    grid-template-columns: auto auto;
   }
 
   .footer-container { 
@@ -323,7 +330,8 @@ h1 {
 }
 
 .introduction,
-.skills {
+.skills,
+.email-forum {
   background-color: #272727;
   padding: 1rem;
   border-radius: 5px;
@@ -676,6 +684,49 @@ h1 {
     color: white;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
+  }
+}
+
+.email-forum {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+
+  .forum-container {
+    display: block;
+    text-align: center;
+
+    li {
+      vertical-align: top;
+      text-align: left;
+    }
+  }
+}
+.grid-container {
+  color: white;
+  grid-template-rows: auto auto auto; 
+  column-gap: 10px;
+  row-gap: 15px;
+  display: grid;
+}
+
+.grid-item {
+  text-align: left;
+  input {
+    float: left;
+  }
+
+  textarea {
+    width: 60vw;
+    height: 150px;
+  }
+
+  #submit {
+    color: white;
+    background-color: #FC5130;
+    padding: 8px 12px;
+    grid-column: 2;
   }
 }
 

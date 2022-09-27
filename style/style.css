@@ -22,6 +22,10 @@
     padding: 10px 12px;
     font-size: 15px;
   }
+  .grid-container {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
   .footer {
     display: block;
   }
@@ -49,6 +53,10 @@
   }
   .mobile-topnav {
     visibility: hidden;
+  }
+  .grid-container {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
   }
   .footer-container {
     display: -webkit-box;
@@ -319,7 +327,8 @@ h1 {
 }
 
 .introduction,
-.skills {
+.skills,
+.email-forum {
   background-color: #272727;
   padding: 1rem;
   border-radius: 5px;
@@ -329,7 +338,8 @@ h1 {
 }
 
 .introduction h2,
-.skills h2 {
+.skills h2,
+.email-forum h2 {
   font-weight: bold;
   text-shadow: 2px 2px 8px black;
 }
@@ -686,6 +696,61 @@ h1 {
   color: white;
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
+}
+
+.email-forum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.email-forum .forum-container {
+  display: block;
+  text-align: center;
+}
+
+.email-forum .forum-container li {
+  vertical-align: top;
+  text-align: left;
+}
+
+.grid-container {
+  color: white;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 15px;
+  display: -ms-grid;
+  display: grid;
+}
+
+.grid-item {
+  text-align: left;
+}
+
+.grid-item input {
+  float: left;
+}
+
+.grid-item textarea {
+  width: 60vw;
+  height: 150px;
+}
+
+.grid-item #submit {
+  color: white;
+  background-color: #FC5130;
+  padding: 8px 12px;
+  -ms-grid-column: 2;
+  grid-column: 2;
 }
 
 @-webkit-keyframes nav-load {
