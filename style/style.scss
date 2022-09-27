@@ -1,4 +1,4 @@
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 400px) {
   .headder {
     display: block;
     // left: 50vw;
@@ -31,7 +31,7 @@
   }
 }
 
-@media only screen and (min-width: 376px) {
+@media only screen and (min-width: 400px) {
   .topnav {
     display: block;
   }
@@ -250,7 +250,7 @@ h1 {
   transition-property: padding-top, background-color;
   transition-duration: 200ms;
   z-index: 1;
-  padding-left: 2rem;
+  padding-left: 1.5rem;
   padding-top: 1rem;
 
   a {
@@ -258,6 +258,7 @@ h1 {
     color: white;
     text-align: center;
     text-decoration: none;
+    margin: 0px 5px 0px 5px;
 
     &:hover {
       background-color: #ddd;
@@ -280,11 +281,12 @@ h1 {
   z-index: 1;
   transition-duration: 200ms;
   overflow: hidden;
-  padding-left: 2rem;
+  padding-left: 1.5rem;
   padding-top: 1rem;
   width: 100vw;
 
   a {
+    margin: 0px 5px 0px 5px;
     float: left;
     color: white;
     text-align: center;
@@ -636,7 +638,7 @@ h1 {
 
   h2 {
     text-align: center;
-      border-bottom: 2px solid white;
+    border-bottom: 2px solid white;
   }
 
   .socialmedia {

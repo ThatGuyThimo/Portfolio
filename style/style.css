@@ -1,4 +1,4 @@
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 400px) {
   .headder {
     display: block;
     text-align: center;
@@ -27,7 +27,7 @@
   }
 }
 
-@media only screen and (min-width: 376px) {
+@media only screen and (min-width: 400px) {
   .topnav {
     display: block;
   }
@@ -241,7 +241,7 @@ h1 {
   -webkit-transition-duration: 200ms;
           transition-duration: 200ms;
   z-index: 1;
-  padding-left: 2rem;
+  padding-left: 1.5rem;
   padding-top: 1rem;
 }
 
@@ -250,6 +250,7 @@ h1 {
   color: white;
   text-align: center;
   text-decoration: none;
+  margin: 0px 5px 0px 5px;
 }
 
 .mobile-topnav a:hover {
@@ -274,12 +275,13 @@ h1 {
   -webkit-transition-duration: 200ms;
           transition-duration: 200ms;
   overflow: hidden;
-  padding-left: 2rem;
+  padding-left: 1.5rem;
   padding-top: 1rem;
   width: 100vw;
 }
 
 .topnav a {
+  margin: 0px 5px 0px 5px;
   float: left;
   color: white;
   text-align: center;
