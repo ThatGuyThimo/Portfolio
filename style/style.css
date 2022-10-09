@@ -743,6 +743,7 @@ h1 {
 .grid-item textarea {
   width: 60vw;
   height: 150px;
+  max-width: 1400px;
 }
 
 .grid-item #submit {
