@@ -251,6 +251,26 @@ h1 {
   transition-property: margin, font-size, max-width;
   transition-duration: 700ms;
 }
+.project-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+.project-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  border-width: 1rem;
+  border: 0.2rem solid #FC5130;
+    &:hover{
+    border-radius: 5px;
+    border-width: 1rem;
+    border: 0.2rem solid #ffbcaf;
+  }
+
+}
 
 .mobile-topnav {
   animation: nav-load 1600ms ease-in-out;
@@ -331,7 +351,8 @@ h1 {
 
 .introduction,
 .skills,
-.email-forum {
+.email-forum,
+.projects {
   background-color: #272727;
   padding: 1rem;
   border-radius: 5px;

@@ -67,6 +67,13 @@ let skillOffset = skills.offsetTop;
     let element = document.getElementById("introduction")
     element.scrollIntoView({ behavior: 'smooth', block: 'start'});
 }
+  document.getElementById("arrow").onclick = function() {
+    let element = document.getElementById("introduction")
+    element.scrollIntoView({ behavior: 'smooth', block: 'start'});
+}
+  document.getElementById("CLE4").onclick = function() {
+    window.location.replace("https://thatguythimo.github.io/CLE4Team21/");
+}
   document.getElementById("nav-skills").onclick = function() {
     let element = document.getElementById("skills")
     element.scrollIntoView({ behavior: 'smooth', block: 'center'});
