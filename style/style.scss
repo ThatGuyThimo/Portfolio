@@ -349,6 +349,15 @@ h1 {
   background-size: cover;
 }
 
+.parallaxs {
+  background-image: url("../images/actief.jpg");
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .introduction,
 .skills,
 .email-forum,
@@ -663,6 +672,10 @@ h1 {
   li {
     padding-bottom: 5px;
     text-align: left;
+    a {
+      color: white;
+      text-decoration: none;
+    }
   }
 
   h2 {
